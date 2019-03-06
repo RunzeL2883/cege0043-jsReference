@@ -3,7 +3,7 @@ function trackAndCircle() {
 	trackLocation();
 	getEarthquakes();
 	getPort();
-
+	loadW3HTML();
 }
 function startup() {
 	document.addEventListener('DOMContentLoaded', function() {

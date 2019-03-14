@@ -1,6 +1,7 @@
+
 var xhrNode;
 
-function callDivNodeJSChange() {
+function callStudentServer() {
 	xhrNode = new XMLHttpRequest();
     var url = "http://developer.cege.ucl.ac.uk:" + httpPortNumber;
 	xhrNode.open("GET", PortNumber, true);
@@ -14,7 +15,7 @@ function callDivNodeJSChange() {
 	xhrNode.send();
 }
 
-function processDivNodeJSChange() {
+function processStudentServer() {
     if (xhrNode.readyState < 4) {// while waiting response from server
     	document.getElementById('ajaxtext').innerHTML = "Loading...";
     }

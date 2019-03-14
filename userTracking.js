@@ -1,12 +1,10 @@
 function trackLocation() {
-	alert('function trackLocation step 1');
 	if (navigator.geolocation) {
 		navigator.geolocation.watchPosition(showPosition);
 	}
 	else {
 		document.getElementById('showLocation').innerHTML = "Geolocation is not supported by this browser.";
 	}
-	alert('function trackLocation step 2');
 }
 
 
@@ -14,15 +12,10 @@ var userMarker;
 
 
 function showPosition(position) {
-	alert('function showPosition step 1');
 	if (userMarker){mymap.removeLayer(userMarker);}
-	alert('function showPosition step 2');
 	userMarker = L.marker([position.coords.latitude, position.coords.longitude]).addTo(mymap).bindPopup("<b>You were here</b>");
-	alert('function showPosition step 3');
 	document.getElementById('showLocation').innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
-	alert('function showPosition step 4');
 	getDistance();
-	alert('function showPosition step 5');
 }
 
 
